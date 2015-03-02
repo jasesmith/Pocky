@@ -1,0 +1,24 @@
+// vars
+$dark: #363639;
+$light: #FFF;
+$active: #3CF;
+$transition: all .3s;
+$gutter: 2rem;
+
+$base-font: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
+$code-font: Consolas, Monaco, 'Andale Mono', monospace;
+
+// functions
+@function contrast-color($color) {
+    @if (lightness($color) > 50) {
+        @return $dark; // Lighter backgorund, return dark color
+    } @else {
+        @return $light; // Darker background, return light color
+    }
+}
+
+// mixins
+@mixin background-stripes($alpha:0.05, $angle:-45deg) {
+    background-size: 1rem 1rem;
+    background-image: linear-gradient($angle, rgba(#FFF, $alpha) 25%, transparent 25%, transparent 50%, rgba(#FFF, $alpha) 50%, rgba(#FFF, $alpha) 75%, transparent 75%, transparent);
+}

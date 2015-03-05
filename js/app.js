@@ -1,6 +1,6 @@
 angular
     .module('app', ['ui.sortable'])
-    .controller('mainController', ['$scope', 'StorageService', function($scope, storage) {
+    .controller('appController', ['$scope', 'StorageService', function($scope, storage) {
 
         var colors = [
             {name: 'apple', color: '#fc1770'},

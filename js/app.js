@@ -13,8 +13,8 @@ angular
             {name: 'dark', color: '#23292C'}
         ];
 
-        $scope.headline = 'Dashboard';
-        $scope.icon = 'tachometer';
+        $scope.headline = 'Pocky';
+        $scope.icon = 'briefcase';
 
         $scope.dragControlListeners = {
             accept: function () {

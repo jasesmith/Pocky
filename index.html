@@ -13,10 +13,11 @@
 
         <div class="wrapper" ng-cloak>
 
-            <header class="">
+            <header class="" ng-if="headline">
 
                 <div class="mark">
-                    Pocky
+                    <i class="fa fa-{{icon}}" ng-if="icon"></i>
+                    {{headline}}
                 </div>
 
             </header>

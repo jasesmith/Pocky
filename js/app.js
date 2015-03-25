@@ -30,18 +30,17 @@ angular
         };
 
     }])
-    .directive('scrollTo', ['$timeout', function($timeout) {
+    .directive('scrollIn', ['$timeout', function($timeout) {
         return {
             restrict: 'A',
             scope: {
-                target: '@scrollTo',
-                delay: '@scrollToDelay'
+                delay: '@scrollDelay'
             },
-            link: function(scope, $element) {
+            link: function(scope, $element, $attrs) {
                 var delay = scope.delay ? scope.delay : 0;
-                $element.on('click', function($event) {
+                $element.on('click', function() { // $event
                     $timeout(function(){
-                        $(".nav-mode").scrollTo($(scope.target), 300);
+                        $($attrs.scrollIn).scrollTo($($attrs.to), 300);
                     }, delay);
                 });
             }

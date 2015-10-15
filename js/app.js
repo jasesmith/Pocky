@@ -1,17 +1,9 @@
-angular
+(function($angular) {
+    'use strict';
+
+    $angular
     .module('app', ['ui.sortable'])
     .controller('appController', ['$scope', 'StorageService', function($scope, storage) {
-
-        var colors = [
-            {name: 'apple', color: '#fc1770'},
-            {name: 'tangerine', color: '#ff7f36'},
-            {name: 'banana', color: '#fff261'},
-            {name: 'kermit', color: '#94ca3d'},
-            {name: 'sky', color: '#15c5ec'},
-            {name: 'berry', color: '#c657af'},
-            {name: 'light', color: '#E3E9EC'},
-            {name: 'dark', color: '#23292C'}
-        ];
 
         $scope.headline = 'Pocky';
         $scope.icon = 'briefcase';
@@ -87,3 +79,4 @@ angular
             }
         };
     });
+})(window.angular);

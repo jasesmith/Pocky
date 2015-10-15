@@ -5,10 +5,20 @@
     .constant('system', {
         name: 'pocky',
         prefix: 'pocky:',
-        version: 0.0.1,
+        version: 0.1,
         dateFormat: 'ddd, MMM D',
         dayFormat: 'dd',
-        timeFormat: 'h:mm a'
+        timeFormat: 'h:mm a',
+        colors: [
+            {name: 'apple', color: '#fc1770'},
+            {name: 'tangerine', color: '#ff7f36'},
+            {name: 'banana', color: '#fff261'},
+            {name: 'kermit', color: '#94ca3d'},
+            {name: 'sky', color: '#15c5ec'},
+            {name: 'berry', color: '#c657af'},
+            {name: 'light', color: '#E3E9EC'},
+            {name: 'dark', color: '#23292C'}
+        ]
     })
     .config(function($stateProvider, $urlRouterProvider) {
 
@@ -19,7 +29,7 @@
             url: '/',
             templateUrl : 'views/main.html',
             controller  : 'mainController'
-        })
+        });
     })
     .config(function($provide) {
         // to use: call $state.forceReload();

@@ -20,6 +20,7 @@
     "tests"
   ],
   "dependencies": {
-    "jamfu": "https://github.com/jasesmith/jamfu.git"
+    "jamfu": "https://github.com/jasesmith/jamfu.git",
+    "ng-sortable": "~1.x.x"
   }
 }
